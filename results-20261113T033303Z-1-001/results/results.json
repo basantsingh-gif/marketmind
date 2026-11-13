@@ -1,0 +1,28 @@
+{
+  "n_days": 1987,
+  "date_range": [
+    "2008-08-11",
+    "2016-06-30"
+  ],
+  "n_headlines": 19890,
+  "rank_ic_full": 0.0472,
+  "p_value_spearman": 0.0352,
+  "p_value_permutation": 0.0354,
+  "rank_ic_vs_prev_day_return": 0.0361,
+  "p_value_vs_prev_day_return": 0.1075,
+  "test_n_days": 597,
+  "test_date_range": [
+    "2014-02-19",
+    "2016-06-30"
+  ],
+  "rank_ic_test": 0.1378,
+  "p_value_test": 0.0007,
+  "threshold_from_train_median": -0.3706,
+  "test_directional_accuracy": 0.531,
+  "test_up_day_base_rate": 0.531,
+  "test_sharpe_strategy": 1.87,
+  "test_sharpe_buy_and_hold": 0.412,
+  "test_total_return_strategy": 0.7979,
+  "test_total_return_buy_and_hold": 0.119,
+  "notes": "No transaction costs. Index-level, single asset. Permutation test ignores autocorrelation."
+}
