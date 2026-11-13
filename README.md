@@ -72,4 +72,4 @@ pip install -r requirements.txt
 python marketmind.py --per_day 10
 python robustness.py --per_day 10
 ```
-`commentary.py` is an experimental LLM comment generator and was not evaluated.
+
