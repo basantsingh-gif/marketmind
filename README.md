@@ -36,6 +36,9 @@ Data: Kaggle "Daily News for Stock Market Prediction" (`Combined_News_DJIA.csv`,
 | IC at t+1 to t+2 / t+2 to t+3 / t+3 to t+4 | -0.025 / +0.037 / -0.009 (all p > 0.10) |
 | IC by year | 2008-10: about 0 or negative; 2011-14: +0.03 to +0.10 (not significant); 2015: +0.14 (p = 0.02); 2016: +0.23 (p = 0.01, n = 125) |
 
+![Hold-out cumulative returns: sentiment long/short vs buy-and-hold (gross, no costs)](cumulative_returns.png)
+*Gross of costs. See the cost sensitivity table below.*
+
 ## Threshold and cost sensitivity
 The median threshold (50th percentile) was fixed in advance and is the headline result. The other
 thresholds below are sensitivity checks on the same hold-out, not a selection. Net Sharpe subtracts
