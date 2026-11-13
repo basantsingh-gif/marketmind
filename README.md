@@ -36,10 +36,25 @@ Data: Kaggle "Daily News for Stock Market Prediction" (`Combined_News_DJIA.csv`,
 | IC at t+1 to t+2 / t+2 to t+3 / t+3 to t+4 | -0.025 / +0.037 / -0.009 (all p > 0.10) |
 | IC by year | 2008-10: about 0 or negative; 2011-14: +0.03 to +0.10 (not significant); 2015: +0.14 (p = 0.02); 2016: +0.23 (p = 0.01, n = 125) |
 
+## Threshold and cost sensitivity
+The median threshold (50th percentile) was fixed in advance and is the headline result. The other
+thresholds below are sensitivity checks on the same hold-out, not a selection. Net Sharpe subtracts
+transaction costs per unit of turnover. Full grid: [threshold_sensitivity.csv](threshold_sensitivity.csv).
+
+| Threshold percentile | Days long | Gross Sharpe | Net @ 5 bps | Net @ 10 bps | Net @ 20 bps |
+|---|---|---|---|---|---|
+| 25 | 73.5% | 0.93 | 0.23 | -0.46 | -1.82 |
+| 40 | 61.3% | 2.06 | 1.21 | 0.36 | -1.31 |
+| 50 (headline) | 52.6% | 1.87 | 0.97 | 0.07 | -1.69 |
+| 60 | 45.4% | 2.50 | 1.59 | 0.67 | -1.15 |
+| 75 | 30.8% | 1.80 | 1.05 | 0.31 | -1.15 |
 ## Interpretation
 Sentiment shows a statistically significant but small next-day relationship in the full sample,
-concentrated in 2015-2016. It does not hold across 2008-2013, and it halves after a 5 bps cost
-assumption. The result is promising but unvalidated, not a tradable strategy.
+concentrated in 2015-2016. Gross hold-out Sharpe is positive for all five thresholds tested, so the
+result is not an artifact of the median cutoff. But the strategy flips position on about half of all
+days: net Sharpe is about 0.97 at 5 bps, about 0.07 at 10 bps, and negative at 20 bps for every
+threshold. The signal does not hold across 2008-2013. The result is promising but unvalidated, not a
+tradable strategy.
 
 ## Limitations
 - Reddit WorldNews is general news, not a financial newswire; headline selection by upvotes may include hindsight.
